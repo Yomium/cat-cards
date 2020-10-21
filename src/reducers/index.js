@@ -17,7 +17,7 @@ const cards = handleActions({
       selected: 'default',
       disabled: 'disabled',
     }
-    
+
     return {
       ...state,
       byId: { ...state.byId, [card.id]: { ...card, state: mapping[card.state] } },
