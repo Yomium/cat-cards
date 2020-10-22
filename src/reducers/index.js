@@ -27,7 +27,10 @@ const cards = handleActions({
 
 const cardsUIState = handleActions({
   [actions.fetchCardsSuccess](state, { payload }) {
-    return _.keyBy(payload.cardsUIState, 'id');
+    const cardsUI = payload.cards.map((card) => {
+      return { id: card.id, state: card.state };
+    });
+    return _.keyBy(cardsUI, 'id');
   },
   [actions.toggleCardState](state, { payload: { id } }) {
     const currentState = state[id].state;
