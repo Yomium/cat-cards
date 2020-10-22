@@ -8,13 +8,10 @@ import reducers from './reducers/index.js';
 import { fetchCards } from './actions/index.js';
 import thunk from 'redux-thunk';
 
-const ext = window.__REDUX_DEVTOOLS_EXTENSION__;
-const devtoolMiddleware = ext && ext();
 const store = createStore(
 	reducers,
 	compose(
 		applyMiddleware(thunk),
-		devtoolMiddleware,
 	),
 );
 
@@ -23,7 +20,7 @@ const cards = [
 		{id: 2, type: "с рыбой", description: ["40 порций", "2 мыши в подарок"], weight:"2", state: "default",},
 		{id: 3, type: "с курой", description: ["100 порций", "5 мышей в подарок", "заказчик доволен"], weight: "5", state: "disabled",},
 	];
-	
+
 store.dispatch(fetchCards(cards));
 
 render(
