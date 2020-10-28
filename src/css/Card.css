@@ -1,0 +1,147 @@
+.card {
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	height: 480px;
+	width: 320px;
+	border-radius: 12px;
+	cursor: pointer;
+}
+
+.card:before {
+	content: '';
+	position: absolute;
+	background-color: #f2f2f2;
+	border-radius: 12px;
+}
+
+.card, .card:before {
+	clip-path: polygon(14% 0, 100% 0, 100% 100%, 0 100%, 0 10%);
+}
+
+.borders:before {
+	top: 4px;
+	left: 4px;
+	right: 4px;
+	bottom: 4px;
+}
+
+.default {
+	background-color: #1698d9;
+}
+
+.selected {
+	background-color: #d91667;
+}
+
+.defaultHovered {
+	background-color: #2ea8e6;
+}
+
+.selectedHovered {
+	background-color: #e62e7a;
+}
+
+.disabled {
+	background-color: #b3b3b3;
+	-webkit-filter: grayscale(50%);
+}
+
+.description {
+	text-align: left;
+	width: 230px;
+	margin: 0 auto;
+	position: relative;
+	z-index: 100;
+}
+
+.note {
+	font-size: 16px;
+	color: #666666;
+	font-family: Treb;
+}
+
+.title {
+	color: #000000;
+	font-family: Treb;
+	font-weight: bold;
+}
+
+.title p {
+	font-size: 48px;
+	margin: 0;
+}
+
+.title span {
+	font-size: 24px;
+}
+
+.quantity {
+	font-size: 14px;
+	line-height: 16px;
+	color: #666666;
+	font-weight: bold;
+	font-family: Treb;
+	white-space: pre-line;
+}
+
+.image {
+	background-image: url(./images/cat.png);
+	width: 300px;
+	height: 266px;
+	background-repeat: no-repeat;
+	position: relative;
+	border-radius: 12px;
+}
+
+.weight {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	width: 80px;
+	height: 80px;
+	border-radius: 40px;
+	position: absolute;
+	top: 175px;
+	left: 227px;
+}
+
+.weight p {
+	font-size: 42px;
+	line-height: 25px;
+	font-family: Treb;
+	padding-top: 15px;
+}
+
+.weight span {
+	display: block;
+	font-size: 21px;
+	margin-top: 3px;
+}
+
+.link {
+	text-align: center;
+	font-size: 13px;
+	line-height: 16px;
+	color: #ffffff;
+	font-family: Treb;
+	filter: drop-shadow(0px 1px 0.5px #000000);
+}
+
+.link.disabled {
+	background-color: inherit;
+	color: #ffff66;
+	filter: drop-shadow(0px 1px 0.5px #000000);
+}
+
+.button {
+	color: #1698d9;
+	background-color: inherit;
+	font-size: inherit;
+	font-weight: bold;
+	padding: 0;
+	border: 0;
+	text-decoration: underline dotted;
+}
