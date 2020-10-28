@@ -34,13 +34,13 @@ class Card extends React.Component {
 
     switch(state) {
       case 'default': {
-        return <p className="link">Чего сидишь? Порадуй котэ, <button className="button" onClick={this.toggleCardState(id)}>купи.</button></p>;
+        return <div><p className="link">Чего сидишь? Порадуй котэ, <button className="button" onClick={this.toggleCardState(id)}>купи.</button></p></div>;
       }
       case 'selected': {
-        return <p className="link">{typeToLink[type]}</p>
+        return <div><p className="link">{typeToLink[type]}</p></div>
       }
       case 'disabled': {
-        return <p className="link disabled">Печалька, {type} закончился</p>
+        return <div><p className="link disabled">Печалька, {type} закончился</p></div>
       }
       default: {
         return null;
@@ -76,8 +76,7 @@ class Card extends React.Component {
           <div className="description">
             <p className="note">{stateToTitle[card.state]}</p>
             <div className="title">
-              <p>Нямушка</p>
-              <span>{card.type}</span>
+              <p>Нямушка<span>{card.type}</span></p>
             </div>
             <p className="quantity">{card.description.join('\n')}</p>
           </div>

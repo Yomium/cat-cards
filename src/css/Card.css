@@ -66,6 +66,7 @@
 	color: #000000;
 	font-family: Treb;
 	font-weight: bold;
+	white-space: pre-wrap;
 }
 
 .title p {
@@ -73,7 +74,8 @@
 	margin: 0;
 }
 
-.title span {
+.title p > span {
+	display: block;
 	font-size: 24px;
 }
 
