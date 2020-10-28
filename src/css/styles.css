@@ -23,28 +23,13 @@ body {
 
 .section {
 	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: space-evenly;
 }
 
-@media (max-width: 576px) {
-	.section {
-		flex-direction: column;
-	}
-}
-
-@media (max-width: 991px) {
-	.section {
-		flex-direction: row;
-		flex-wrap: wrap;
-		justify-content: space-evenly;
-	}
-}
-
-@media (min-width: 992px) {
-	.section {
-		flex-direction: row;
-		justify-content: space-evenly;
-		align-content: center;
-	}
+.section > .option {
+	margin: 10px;
 }
 
 .card {
